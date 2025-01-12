@@ -1,0 +1,122 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Travelim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500;1,600;1,700&family=Roboto+Slab:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Style/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 class="logo">
+        Travelim
+        <span><img src="Images/background/icon.png" class="logo-img" /></span>
+      </h1>
+      <div class="navbar-nav">
+        <a href="#home"> Home </a>
+        <a href="#penerbangan"> Flights </a>
+        <a href="#"> About </a>
+        <a href="#"> Contact </a>
+      </div>
+    </nav>
+    <div class="hero" id="home">
+      <h1>Book Your Flight Now!</h1>
+    </div>
+    <div class="container">
+      <div class="search-form">
+        <input placeholder="From" type="text" />
+        <input placeholder="To" type="text" />
+        <input type="date" />
+        <select>
+          <option value="1">1 Adult</option>
+          <option value="2">2 Adults</option>
+          <option value="3">3 Adults</option>
+          <option value="4">4 Adults</option>
+        </select>
+        <button type="submit">Search</button>
+      </div>
+      <div class="flights" id="penerbangan">
+        <div class="flight">
+          <img
+            alt="Airplane flying in the sky with clouds"
+            src="Images/plane/Citilink.jpeg"
+          />
+          <h3>Flight to Bandung</h3>
+          <p>Flight Code : BDG001</p>
+          <p>Price: $500</p>
+          <button onclick="window.location.href='booking.html'">
+            Book Now
+          </button>
+        </div>
+        <div class="flight">
+          <img
+            alt="Airplane on the runway ready for takeoff"
+            src="Images/plane/Garuda Indonesia.jpg"
+          />
+          <h3>Flight to Bali</h3>
+          <p>Flight Code : BLI002</p>
+          <p>Price: $600</p>
+          <button onclick="window.location.href='booking.html'">
+            Book Now
+          </button>
+        </div>
+        <div class="flight">
+          <img
+            alt="Airplane flying over a cityscape"
+            src="Images/plane/Lion Air.jpg"
+          />
+          <h3>Flight to Yogyakarta</h3>
+          <p>Flight Code : YKT003</p>
+          <p>Price: $700</p>
+          <button onclick="window.location.href='booking.html'">
+            Book Now
+          </button>
+        </div>
+        <div class="flight">
+          <img
+            alt="Airplane flying over mountains during sunset"
+            src="Images/plane/Lion Air.jpg"
+          />
+          <h3>Flight to Paris</h3>
+          <p>Flight Code : JKT004</p>
+          <p>Price: $550</p>
+          <button onclick="window.location.href='booking.html'">
+            Book Now
+          </button>
+        </div>
+        <div class="flight">
+          <img
+            alt="Airplane flying over the ocean with a clear sky"
+            src="Images/plane/Citilink.jpeg"
+          />
+          <h3>Flight to Palembang</h3>
+          <p>Flight Code : PLB005</p>
+          <p>Price: $800</p>
+          <button onclick="window.location.href='booking.html'">
+            Book Now
+          </button>
+        </div>
+        <div class="flight">
+          <img
+            alt="Airplane flying over a desert landscape"
+            src="Images/plane/Citilink.jpeg"
+          />
+          <h3>Flight to Riau</h3>
+          <p>Flight Code : RIU006</p>
+          <p>Price: $650</p>
+          <button onclick="window.location.href='booking.html'">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>© 2023 Flight Booking. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

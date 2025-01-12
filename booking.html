@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travelim Booking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500;1,600;1,700&family=Roboto+Slab:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Style/booking-style.css" />
+  </head>
+  <body>
+    <div>
+      <nav class="navbar">
+        <h1 class="logo">
+          Travelim
+          <span><img src="Images/background/icon.png" class="logo-img" /></span>
+        </h1>
+        <div class="navbar-nav">
+          <a href="index.html"> Home </a>
+          <a href="index.html"> Flights </a>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="form-container">
+        <h2>Passenger Information Form</h2>
+        <form>
+          <div class="form-group">
+            <label for="flight-code">Flight Code</label>
+            <select id="pilihan" name="pilihan" required>
+              <option value="opsi1">BDG001</option>
+              <option value="opsi2">BLI002</option>
+              <option value="opsi3">YKT003</option>
+              <option value="opsi4">JKT004</option>
+              <option value="opsi3">PLB005</option>
+              <option value="opsi4">RIU006</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required />
+          </div>
+          <div class="form-group">
+            <button onclick="window.location.href='payment.html'" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2023 Flight Booking Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <title>Form Pembayaran Travelim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500;1,600;1,700&family=Roboto+Slab:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Style/payment-style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Form Pembayaran Penerbangan</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Nama Lengkap</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Masukkan nama lengkap Anda"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Masukkan email Anda"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone">Nomor Telepon</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Masukkan nomor telepon Anda"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="flight-number">Nomor Penerbangan</label>
+          <input
+            type="text"
+            id="flight-number"
+            name="flight-number"
+            placeholder="Masukkan nomor penerbangan Anda"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="payment-method">Metode Pembayaran</label>
+          <select id="payment-method" name="payment-method" required>
+            <option value="credit-card">Kartu Kredit</option>
+            <option value="debit-card">Kartu Debit</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank-transfer">Transfer Bank</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="card-number">Nomor Kartu</label>
+          <input
+            type="text"
+            id="card-number"
+            name="card-number"
+            placeholder="Masukkan nomor kartu Anda"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="expiry-date">Tanggal Kedaluwarsa</label>
+          <input
+            type="text"
+            id="expiry-date"
+            name="expiry-date"
+            placeholder="MM/YY"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input
+            type="text"
+            id="cvv"
+            name="cvv"
+            placeholder="Masukkan CVV Anda"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            onclick="window.location.href='payment-successfull.html'"
+            type="submit"
+            value="Bayar Sekarang"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
