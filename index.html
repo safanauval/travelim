@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Travelim</title>
+    <title>Travelim Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,8 +20,8 @@
       <div class="navbar-nav">
         <a href="#home"> Home </a>
         <a href="#penerbangan"> Flights </a>
-        <a href="#"> About </a>
-        <a href="#"> Contact </a>
+        <a href="#about"> About </a>
+        <a href="#contact"> Contact </a>
       </div>
     </nav>
     <div class="hero" id="home">
@@ -114,6 +114,124 @@
           </button>
         </div>
       </div>
+    </div>
+    <div>
+      <section id="about" class="about">
+        <h2>About Travelim</h2>
+        <p>
+          Travelim is your trusted flight booking platform, providing a seamless
+          and user-friendly experience for all your travel needs. Whether you're
+          planning a vacation, a business trip, or a spontaneous getaway, we
+          have you covered with a wide selection of flights and destinations.
+        </p>
+        <img src="Images/background/travelim.webp" alt="" />
+      </section>
+    </div>
+    <div>
+      <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@travelim.com</p>
+        <p>Phone: +123 456 789</p>
+        <p>Address: 123 Travelim Street, Wanderlust City</p>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </div>
+    <div>
+      <button
+        class="toggle-button"
+        id="toggle-chatbot"
+        onclick="toggleChatbot()"
+      >
+        💬
+      </button>
+
+      <div class="chatbot-container" id="chatbot-container">
+        <div class="chatbot-header">
+          Ai Chatbot
+          <button class="close-button" onclick="closeChatbot()">✖</button>
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+          <div class="bot-message message">Hi! How can I assist you today?</div>
+        </div>
+        <div class="chatbot-footer">
+          <input
+            type="text"
+            id="chatbot-input"
+            class="chatbot-input"
+            placeholder="Type your message..."
+          />
+          <button class="send-button" onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+
+      <script>
+        function toggleChatbot() {
+          const chatbot = document.getElementById("chatbot-container");
+          if (
+            chatbot.style.display === "none" ||
+            chatbot.style.display === ""
+          ) {
+            chatbot.style.display = "flex";
+          } else {
+            chatbot.style.display = "none";
+          }
+        }
+
+        function closeChatbot() {
+          const chatbot = document.getElementById("chatbot-container");
+          chatbot.style.display = "none";
+        }
+
+        function sendMessage() {
+          const inputField = document.getElementById("chatbot-input");
+          const message = inputField.value.trim();
+          if (message === "") return;
+
+          // Display user message
+          const chatbotBody = document.getElementById("chatbot-body");
+          const userMessage = document.createElement("div");
+          userMessage.className = "user-message message";
+          userMessage.textContent = message;
+          chatbotBody.appendChild(userMessage);
+
+          // Scroll to bottom
+          chatbotBody.scrollTop = chatbotBody.scrollHeight;
+
+          // Clear input field
+          inputField.value = "";
+
+          // Generate bot response
+          generateResponse(message);
+        }
+
+        function generateResponse(message) {
+          const chatbotBody = document.getElementById("chatbot-body");
+          const botMessage = document.createElement("div");
+          botMessage.className = "bot-message message";
+
+          // Simple responses based on input
+          if (message.toLowerCase().includes("flight")) {
+            botMessage.textContent =
+              "You can search for flights in the Flights section or let me know the destination, and I will assist you!";
+          } else if (message.toLowerCase().includes("contact")) {
+            botMessage.textContent =
+              "You can reach us via the Contact section or email us at support@travelim.com.";
+          } else {
+            botMessage.textContent =
+              "Sorry, I didn't quite catch that. Can you please rephrase or ask about flights, contact, or bookings?";
+          }
+
+          chatbotBody.appendChild(botMessage);
+
+          // Scroll to bottom
+          chatbotBody.scrollTop = chatbotBody.scrollHeight;
+        }
+      </script>
     </div>
     <footer>
       <p>© 2023 Flight Booking. All rights reserved.</p>

@@ -1,0 +1,66 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5%;
+  height: 400;
+}
+
+.container {
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.content {
+  text-align: center;
+}
+
+.checkmark-icon {
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 0.8rem;
+  color: rgba(75, 85, 99, 1);
+  margin-bottom: 10px;
+}
+
+.details {
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.details p {
+  word-spacing: 0%;
+}
+
+.details strong {
+  display: inline;
+}
+
+.button {
+  display: inline-block;
+  background-color: rgb(37, 99, 235);
+  color: white;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: rgb(29, 78, 216);
+}
